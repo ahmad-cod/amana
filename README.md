@@ -62,14 +62,3 @@ The ticker in `script.js` attempts to fetch live order data from:
 ```
 
 If that endpoint is not available, it falls back to demo marketplace updates so the landing page still feels active.
-
-## Design Direction
-
-The visual style follows a dark neo-brutalist / premium tech direction:
-
-- Deep charcoal background
-- Mint green trust accent
-- Amber and tangerine youth/hustle accents
-- Strong typography
-- Crisp borders and app-like interactive panels
-#Amana
