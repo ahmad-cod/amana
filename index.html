@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amana - Your Route. Their Delivery.</title>
+    <meta
+      name="description"
+      content="Amana turns trusted campus and interstate routes into secure, affordable parcel delivery."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="nav">
+        <a href="#" class="brand" aria-label="Amana home">
+          <span class="brand-mark">A</span>
+          <span>Amana</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#trust">Trust</a>
+          <a href="#personas">Send or Earn</a>
+          <a href="#pulse">Live Pulse</a>
+        </nav>
+        <a class="nav-cta" href="tel:*3844823#">Dial *384*1002001#</a>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <h1 id="hero-title">Your Route. Their Delivery. Everyone Wins.</h1>
+            <p class="hero-subtitle">
+              Turn empty backpack space into a secure micro-income stream. Send lightweight parcels
+              across campus or interstate with the absolute assurance of Amana.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="tel:*384*1002001#">Start with USSD</a>
+              <a class="button secondary" href="#personas">Calculate a trip</a>
+            </div>
+          </div>
+
+          <div class="hero-panel" aria-label="Route matching preview">
+            <div class="route-card">
+              <div class="card-header">
+                <span class="status-dot"></span>
+                <span>Route matcher</span>
+              </div>
+              <label>
+                From
+                <input id="fromInput" type="text" value="BUK New Campus" autocomplete="off" />
+              </label>
+              <label>
+                To
+                <input id="toInput" type="text" value="Sabon Gari" autocomplete="off" />
+              </label>
+              <button id="matchButton" class="button primary full" type="button">
+                Find trusted commuters
+              </button>
+              <div id="matchResult" class="match-result" aria-live="polite">
+                3 commuters on this path right now.
+              </div>
+            </div>
+
+            <div class="visual-lockup" aria-hidden="true">
+              <div class="map-grid"></div>
+              <div class="backpack">
+                <div class="bag-lid"></div>
+                <div class="bag-body"></div>
+                <div class="bag-pocket"></div>
+              </div>
+              <div class="lockbox">
+                <div class="lock-shackle"></div>
+                <div class="lock-body">OTP</div>
+              </div>
+              <div class="route-line"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="trust" class="section trust-section" aria-labelledby="trust-title">
+          <div class="section-heading">
+            <h2 id="trust-title">Security people can feel before the parcel moves.</h2>
+          </div>
+          <div class="handshake" role="list">
+            <article class="step active" role="listitem">
+              <span class="step-number">01</span>
+              <h3>The Secure Log</h3>
+              <p>Sender logs the item. Amana generates twin safety tokens for the trip.</p>
+            </article>
+            <article class="step" role="listitem">
+              <span class="step-number">02</span>
+              <h3>The Handover Alert</h3>
+              <p>Traveler accepts the route. SMS codes are fired instantly to separate devices.</p>
+            </article>
+            <article class="step" role="listitem">
+              <span class="step-number">03</span>
+              <h3>The Secure Unlock</h3>
+              <p>Recipient provides the delivery OTP. Escrow cash releases to the traveler.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="personas" class="section personas" aria-labelledby="persona-title">
+          <div class="section-heading compact">
+            <h2 id="persona-title">Send a sako or earn on your commute.</h2>
+          </div>
+          <div class="persona-toggle" role="tablist" aria-label="Choose persona">
+            <button class="toggle-option active" type="button" role="tab" aria-selected="true" data-persona="sender">
+              I want to Send
+            </button>
+            <button class="toggle-option" type="button" role="tab" aria-selected="false" data-persona="traveler">
+              I want to Earn
+            </button>
+          </div>
+          <div class="persona-content">
+            <div>
+              <p id="personaKicker" class="persona-kicker">For senders</p>
+              <h3 id="personaTitle">Why pay more to wait three days?</h3>
+              <p id="personaCopy">
+                Send documents, gadgets, and small packages with a trusted student traveler for a
+                fraction of standard interstate courier pricing.
+              </p>
+            </div>
+            <div class="calculator" aria-label="Trip value preview">
+              <span class="calc-label">Estimated save or earn</span>
+              <strong id="personaAmount">₦12,800</strong>
+              <span id="personaHint">Compared with a typical express courier quote.</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="pulse" class="section pulse-section" aria-labelledby="pulse-title">
+          <div class="section-heading compact">
+            <h2 id="pulse-title">A network that looks alive because it is.</h2>
+          </div>
+          <div class="pulse-board">
+            <div id="pulseTicker" class="ticker" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <section class="final-cta" aria-labelledby="cta-title">
+          <p class="eyebrow">No app download required</p>
+          <h2 id="cta-title">Move the next package with a code everyone already understands.</h2>
+          <a class="ussd-banner" href="tel:*384*1002001#">Dial *384*1002001# to Start</a>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
